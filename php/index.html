@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Test</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Header styling */
+        header {
+            width: 100%;
+            background-color: black;
+            padding: 20px 0;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Container for buttons */
+        .button-container {
+            margin-top: 100px; /* Space below the header */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* Button styling */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        /* Button hover effect */
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with title -->
+    <header>
+        QuizTest
+    </header>
+
+    <!-- Main content with buttons -->
+    <div class="button-container">
+        <a href="./quiz.html" class="btn">Start Quiz</a>
+        <a href="./records.html" class="btn">View Records</a>
+    </div>
+</body>
+</html>

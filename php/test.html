@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Test</title>
+    <link rel="stylesheet" href="../css/english.css">
+</head>
+<body>
+    <h1>Welcome to the <span id="quiz-subject"></span> quiz!</h1>
+
+    <div class="timer">
+        Time Remaining: <span id="time">900</span> seconds
+    </div>
+
+    <div class="question-container">
+        <div id="question" class="question">Loading...</div>
+        <ul id="options" class="options">
+            <!-- Options will be dynamically inserted here -->
+        </ul>
+        <button id="next-btn" class="hidden" onclick="nextQuestion()">Next Question</button>
+    </div>
+
+    <div class="result hidden" id="result">
+        You scored: <span id="score">0</span> out of 10.
+    </div>
+    <script src="../js/english.js"></script>
+</body>
+</html>
+

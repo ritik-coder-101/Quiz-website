@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.question-container {
+    margin: 50px auto;
+    width: 60%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    margin: 10px 0;
+}
+
+.options button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.options button:hover {
+    background-color: #45a049;
+}
+
+.timer {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.result {
+    font-size: 24px;
+    color: green;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+/* Next Button Styles */
+#next-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #7e1747;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 30%;
+    transition: background-color 0.3s;
+    margin-top: 20px;  /* Adds space between the options and the button */
+}
+
+#next-btn:hover {
+    background-color: #681276;  /* Darker green when hovered */
+}
+
+#next-btn:focus {
+    outline: none;  /* Remove outline on click */
+}
+
+#next-btn.hidden {
+    display: none;  /* Hide the button by default */
+}

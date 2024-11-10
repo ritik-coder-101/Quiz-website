@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Topics</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 100px; /* Space for header */
+            min-height: 100vh;
+            padding-left: 20px;  /* Gap from the left boundary */
+            padding-right: 20px; /* Gap from the right boundary */
+        }
+
+        /* Header styling */
+        header {
+            width: 100%;
+            background-color: black;
+            padding: 20px 0;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Container for quiz subjects */
+        .subjects-container {
+            width: 100%; /* Full width of viewport */
+            margin-top: 20px;
+        }
+
+        /* Individual subject div styling */
+        .subject {
+            background-color: rgb(11, 65, 191); /* Initial background color is green */
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between left icon, text, and right arrow */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            margin-bottom: 15px; /* Gap between each subject */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+        }
+
+        /* Left icon styling */
+        .subject i {
+            font-size: 24px;
+        }
+
+        /* Hover effect for the arrow (glowing blue) */
+        .subject i:last-child {
+            transition: color 0.3s ease;
+        }
+
+        .subject:hover i:last-child {
+            color: cyan; /* Glowing effect when hovering the arrow */
+        }
+
+        /* Keyframes for color change animation (orange color) */
+        @keyframes changeColor {
+            0% {
+                background-color: rgb(48, 147, 239); /* Original color (green) */
+            }
+            100% {
+                background-color: orange; /* Change to orange */
+            }
+        }
+
+        /* Hover effect for subject divs */
+        .subject:hover {
+            background-color: rgb(48, 147, 239);; /* Darker cyan on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        Quiz Topics
+    </header>
+
+    <!-- Subjects Container -->
+    <div class="subjects-container">
+        <div class="subject" onclick="window.location.href='test.html?subject=english'">
+            <i>📘</i> <!-- Placeholder icon for English -->
+            English
+            <i>→</i> <!-- Right arrow icon -->
+        </div>
+        <div class="subject">
+            <i>📕</i> <!-- Placeholder icon for Hindi -->
+            Hindi
+            <i>→</i> <!-- Right arrow icon -->
+        </div>
+        <div class="subject">
+            <i>📐</i> <!-- Placeholder icon for Math -->
+            Math
+            <i>→</i> <!-- Right arrow icon -->
+        </div>
+        <div class="subject">
+            <i>🔬</i> <!-- Placeholder icon for Science -->
+            Science
+            <i>→</i> <!-- Right arrow icon -->
+        </div>
+        <div class="subject">
+            <i>🌍</i> <!-- Placeholder icon for SST -->
+            SST
+            <i>→</i> <!-- Right arrow icon -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the click event
+        document.querySelectorAll('.subject').forEach(subject => {
+            subject.addEventListener('click', function () {
+                // Apply the background color change animation
+                this.style.animation = 'changeColor 0.2s forwards'; // Animation to change color to orange
+
+                // After 2 seconds, revert to the original green color
+                setTimeout(() => {
+                    this.style.backgroundColor = 'rgb(48, 147, 239)'; // Reset back to green
+                    this.style.animation = ''; // Remove animation once it's done
+                }, 1000); // 1 seconds delay to revert color
+            });
+        });
+    </script>
+</body>
+</html>
